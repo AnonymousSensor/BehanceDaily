@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D63230E11E97330500346BDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63230E01E97330500346BDC /* AppDelegate.swift */; };
-		D63230E81E97330500346BDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D63230E71E97330500346BDC /* Assets.xcassets */; };
+		D63231011E973CEA00346BDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63231001E973CEA00346BDC /* AppDelegate.swift */; };
+		D63231041E973CFE00346BDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D63231021E973CFE00346BDC /* Assets.xcassets */; };
+		D63231051E973CFE00346BDC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D63231031E973CFE00346BDC /* Info.plist */; };
 		F75D30660B0A6456977AA257 /* Pods_BehanceDaily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3446F528EA75BB27EDF743E2 /* Pods_BehanceDaily.framework */; };
 /* End PBXBuildFile section */
 
@@ -17,9 +18,9 @@
 		9306FD3ECAF39FDD289B9191 /* Pods-BehanceDaily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BehanceDaily.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BehanceDaily/Pods-BehanceDaily.debug.xcconfig"; sourceTree = "<group>"; };
 		AC605CFF17F5228E7E659B25 /* Pods-BehanceDaily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BehanceDaily.release.xcconfig"; path = "Pods/Target Support Files/Pods-BehanceDaily/Pods-BehanceDaily.release.xcconfig"; sourceTree = "<group>"; };
 		D63230DD1E97330500346BDC /* BehanceDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BehanceDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D63230E01E97330500346BDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../AppDelegate.swift; sourceTree = "<group>"; };
-		D63230E71E97330500346BDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
-		D63230EC1E97330500346BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		D63231001E973CEA00346BDC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = BehanceDaily/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		D63231021E973CFE00346BDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = BehanceDaily/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		D63231031E973CFE00346BDC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BehanceDaily/Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +95,7 @@
 		D63230F31E973A7700346BDC /* App */ = {
 			isa = PBXGroup;
 			children = (
-				D63230E01E97330500346BDC /* AppDelegate.swift */,
+				D63231001E973CEA00346BDC /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -130,8 +131,8 @@
 		D63230F81E973ADA00346BDC /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				D63230E71E97330500346BDC /* Assets.xcassets */,
-				D63230EC1E97330500346BDC /* Info.plist */,
+				D63231021E973CFE00346BDC /* Assets.xcassets */,
+				D63231031E973CFE00346BDC /* Info.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -205,7 +206,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D63230E81E97330500346BDC /* Assets.xcassets in Resources */,
+				D63231051E973CFE00346BDC /* Info.plist in Resources */,
+				D63231041E973CFE00346BDC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D63230E11E97330500346BDC /* AppDelegate.swift in Sources */,
+				D63231011E973CEA00346BDC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
