@@ -12,9 +12,13 @@
 		D63230E61E97330500346BDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63230E41E97330500346BDC /* Main.storyboard */; };
 		D63230E81E97330500346BDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D63230E71E97330500346BDC /* Assets.xcassets */; };
 		D63230EB1E97330500346BDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63230E91E97330500346BDC /* LaunchScreen.storyboard */; };
+		F75D30660B0A6456977AA257 /* Pods_BehanceDaily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3446F528EA75BB27EDF743E2 /* Pods_BehanceDaily.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3446F528EA75BB27EDF743E2 /* Pods_BehanceDaily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BehanceDaily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9306FD3ECAF39FDD289B9191 /* Pods-BehanceDaily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BehanceDaily.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BehanceDaily/Pods-BehanceDaily.debug.xcconfig"; sourceTree = "<group>"; };
+		AC605CFF17F5228E7E659B25 /* Pods-BehanceDaily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BehanceDaily.release.xcconfig"; path = "Pods/Target Support Files/Pods-BehanceDaily/Pods-BehanceDaily.release.xcconfig"; sourceTree = "<group>"; };
 		D63230DD1E97330500346BDC /* BehanceDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BehanceDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D63230E01E97330500346BDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D63230E21E97330500346BDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F75D30660B0A6456977AA257 /* Pods_BehanceDaily.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E024AB6B9396D275CE4D5C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9306FD3ECAF39FDD289B9191 /* Pods-BehanceDaily.debug.xcconfig */,
+				AC605CFF17F5228E7E659B25 /* Pods-BehanceDaily.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9F3523888D206C5D7A80E4AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3446F528EA75BB27EDF743E2 /* Pods_BehanceDaily.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D63230D41E97330400346BDC = {
 			isa = PBXGroup;
 			children = (
 				D63230DF1E97330500346BDC /* BehanceDaily */,
 				D63230DE1E97330500346BDC /* Products */,
+				6E024AB6B9396D275CE4D5C6 /* Pods */,
+				9F3523888D206C5D7A80E4AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D63230EF1E97330500346BDC /* Build configuration list for PBXNativeTarget "BehanceDaily" */;
 			buildPhases = (
+				C233CE796720DD916876B6B2 /* [CP] Check Pods Manifest.lock */,
 				D63230D91E97330500346BDC /* Sources */,
 				D63230DA1E97330500346BDC /* Frameworks */,
 				D63230DB1E97330500346BDC /* Resources */,
+				E4BC64A1C620654D852E4544 /* [CP] Embed Pods Frameworks */,
+				2889572AFF8375A2A08D046B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2889572AFF8375A2A08D046B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BehanceDaily/Pods-BehanceDaily-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C233CE796720DD916876B6B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E4BC64A1C620654D852E4544 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BehanceDaily/Pods-BehanceDaily-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D63230D91E97330500346BDC /* Sources */ = {
@@ -258,6 +333,7 @@
 		};
 		D63230F01E97330500346BDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9306FD3ECAF39FDD289B9191 /* Pods-BehanceDaily.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BehanceDaily/Info.plist;
@@ -270,6 +346,7 @@
 		};
 		D63230F11E97330500346BDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC605CFF17F5228E7E659B25 /* Pods-BehanceDaily.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BehanceDaily/Info.plist;

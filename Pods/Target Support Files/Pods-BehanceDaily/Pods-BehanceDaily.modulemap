@@ -1,0 +1,6 @@
+framework module Pods_BehanceDaily {
+  umbrella header "Pods-BehanceDaily-umbrella.h"
+
+  export *
+  module * { export * }
+}
