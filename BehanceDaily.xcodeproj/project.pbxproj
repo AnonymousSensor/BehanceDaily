@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D63230E11E97330500346BDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63230E01E97330500346BDC /* AppDelegate.swift */; };
-		D63230E31E97330500346BDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63230E21E97330500346BDC /* ViewController.swift */; };
-		D63230E61E97330500346BDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63230E41E97330500346BDC /* Main.storyboard */; };
 		D63230E81E97330500346BDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D63230E71E97330500346BDC /* Assets.xcassets */; };
-		D63230EB1E97330500346BDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63230E91E97330500346BDC /* LaunchScreen.storyboard */; };
 		F75D30660B0A6456977AA257 /* Pods_BehanceDaily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3446F528EA75BB27EDF743E2 /* Pods_BehanceDaily.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,12 +17,9 @@
 		9306FD3ECAF39FDD289B9191 /* Pods-BehanceDaily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BehanceDaily.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BehanceDaily/Pods-BehanceDaily.debug.xcconfig"; sourceTree = "<group>"; };
 		AC605CFF17F5228E7E659B25 /* Pods-BehanceDaily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BehanceDaily.release.xcconfig"; path = "Pods/Target Support Files/Pods-BehanceDaily/Pods-BehanceDaily.release.xcconfig"; sourceTree = "<group>"; };
 		D63230DD1E97330500346BDC /* BehanceDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BehanceDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D63230E01E97330500346BDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D63230E21E97330500346BDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D63230E51E97330500346BDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D63230E71E97330500346BDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D63230EA1E97330500346BDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D63230EC1E97330500346BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D63230E01E97330500346BDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../AppDelegate.swift; sourceTree = "<group>"; };
+		D63230E71E97330500346BDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		D63230EC1E97330500346BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,14 +72,75 @@
 		D63230DF1E97330500346BDC /* BehanceDaily */ = {
 			isa = PBXGroup;
 			children = (
-				D63230E01E97330500346BDC /* AppDelegate.swift */,
-				D63230E21E97330500346BDC /* ViewController.swift */,
-				D63230E41E97330500346BDC /* Main.storyboard */,
-				D63230E71E97330500346BDC /* Assets.xcassets */,
-				D63230E91E97330500346BDC /* LaunchScreen.storyboard */,
-				D63230EC1E97330500346BDC /* Info.plist */,
+				D63230F21E9737F300346BDC /* Application */,
+				D63230F91E973AFF00346BDC /* Library */,
+				D63230F81E973ADA00346BDC /* Resource */,
 			);
 			path = BehanceDaily;
+			sourceTree = "<group>";
+		};
+		D63230F21E9737F300346BDC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D63230F71E973AA800346BDC /* Network */,
+				D63230F61E973A9F00346BDC /* UI */,
+				D63230F51E973A9500346BDC /* Data */,
+				D63230F41E973A8800346BDC /* Define */,
+				D63230F31E973A7700346BDC /* App */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D63230F31E973A7700346BDC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D63230E01E97330500346BDC /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D63230F41E973A8800346BDC /* Define */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Define;
+			sourceTree = "<group>";
+		};
+		D63230F51E973A9500346BDC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D63230F61E973A9F00346BDC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D63230F71E973AA800346BDC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D63230F81E973ADA00346BDC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D63230E71E97330500346BDC /* Assets.xcassets */,
+				D63230EC1E97330500346BDC /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D63230F91E973AFF00346BDC /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D63230EB1E97330500346BDC /* LaunchScreen.storyboard in Resources */,
 				D63230E81E97330500346BDC /* Assets.xcassets in Resources */,
-				D63230E61E97330500346BDC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,31 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D63230E31E97330500346BDC /* ViewController.swift in Sources */,
 				D63230E11E97330500346BDC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		D63230E41E97330500346BDC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D63230E51E97330500346BDC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D63230E91E97330500346BDC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D63230EA1E97330500346BDC /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D63230ED1E97330500346BDC /* Debug */ = {
@@ -376,6 +409,7 @@
 				D63230F11E97330500346BDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
