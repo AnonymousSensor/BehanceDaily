@@ -10,6 +10,9 @@
 		D63231011E973CEA00346BDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63231001E973CEA00346BDC /* AppDelegate.swift */; };
 		D63231041E973CFE00346BDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D63231021E973CFE00346BDC /* Assets.xcassets */; };
 		D63231051E973CFE00346BDC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D63231031E973CFE00346BDC /* Info.plist */; };
+		D632310A1E97414100346BDC /* CreativeCategoryEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63231091E97414100346BDC /* CreativeCategoryEngine.swift */; };
+		D632310C1E9741AB00346BDC /* GlobalMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632310B1E9741AB00346BDC /* GlobalMacro.swift */; };
+		D63231101E97434700346BDC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632310F1E97434700346BDC /* Category.swift */; };
 		F75D30660B0A6456977AA257 /* Pods_BehanceDaily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3446F528EA75BB27EDF743E2 /* Pods_BehanceDaily.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +24,9 @@
 		D63231001E973CEA00346BDC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = BehanceDaily/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		D63231021E973CFE00346BDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = BehanceDaily/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		D63231031E973CFE00346BDC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BehanceDaily/Info.plist; sourceTree = SOURCE_ROOT; };
+		D63231091E97414100346BDC /* CreativeCategoryEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreativeCategoryEngine.swift; sourceTree = "<group>"; };
+		D632310B1E9741AB00346BDC /* GlobalMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalMacro.swift; sourceTree = "<group>"; };
+		D632310F1E97434700346BDC /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +89,12 @@
 		D63230F21E9737F300346BDC /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				D63230F71E973AA800346BDC /* Network */,
-				D63230F61E973A9F00346BDC /* UI */,
+				D63230F31E973A7700346BDC /* App */,
 				D63230F51E973A9500346BDC /* Data */,
 				D63230F41E973A8800346BDC /* Define */,
-				D63230F31E973A7700346BDC /* App */,
+				D632310D1E97431E00346BDC /* Model */,
+				D63230F71E973AA800346BDC /* Network */,
+				D63230F61E973A9F00346BDC /* UI */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -103,6 +110,7 @@
 		D63230F41E973A8800346BDC /* Define */ = {
 			isa = PBXGroup;
 			children = (
+				D632310B1E9741AB00346BDC /* GlobalMacro.swift */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -124,6 +132,7 @@
 		D63230F71E973AA800346BDC /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D63231061E9740F400346BDC /* Category */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -142,6 +151,30 @@
 			children = (
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		D63231061E9740F400346BDC /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D63231091E97414100346BDC /* CreativeCategoryEngine.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		D632310D1E97431E00346BDC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D632310E1E97432E00346BDC /* Category */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D632310E1E97432E00346BDC /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D632310F1E97434700346BDC /* Category.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +212,7 @@
 				TargetAttributes = {
 					D63230DC1E97330500346BDC = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = HD29GU94HU;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -266,7 +300,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D632310C1E9741AB00346BDC /* GlobalMacro.swift in Sources */,
+				D632310A1E97414100346BDC /* CreativeCategoryEngine.swift in Sources */,
 				D63231011E973CEA00346BDC /* AppDelegate.swift in Sources */,
+				D63231101E97434700346BDC /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +408,7 @@
 			baseConfigurationReference = 9306FD3ECAF39FDD289B9191 /* Pods-BehanceDaily.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HD29GU94HU;
 				INFOPLIST_FILE = BehanceDaily/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chenkai.BehanceDaily;
@@ -384,6 +422,7 @@
 			baseConfigurationReference = AC605CFF17F5228E7E659B25 /* Pods-BehanceDaily.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HD29GU94HU;
 				INFOPLIST_FILE = BehanceDaily/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chenkai.BehanceDaily;

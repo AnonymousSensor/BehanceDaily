@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import RxSwift
+import Moya
+import Moya_ObjectMapper
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let provider = RxMoyaProvider<CreativeCategory>()
+        provider.request(.Category).mapObject(CategoryResult.self).subscribe({event in
+            switch event{
+            case .next(let categoryResult):
+                print("Fields总数:\(categoryResult.fields!.count) 第一个Fields名称:\(categoryResult.fields![0].name)")
+            default:
+                print("default value")
+            }
+        })
         return true
     }
 
