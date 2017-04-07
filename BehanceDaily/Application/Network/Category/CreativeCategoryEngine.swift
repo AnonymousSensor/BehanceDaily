@@ -11,6 +11,7 @@ import Moya
 
 enum CreativeCategory{
     case Category
+    case InterestedCreative
 }
 
 extension CreativeCategory: TargetType{
@@ -19,40 +20,42 @@ extension CreativeCategory: TargetType{
         switch self {
         case .Category:
             return BEHANCE_URL_CATEGORY
+        case .InterestedCreative:
+            return BEHANCE_URL_INTERESTED_CREATIVE
         }
     }
     
     var method: Moya.Method{
         switch self {
-        case .Category:
+        case .Category,.InterestedCreative:
             return .get
         }
     }
     
     var parameters: [String : Any]?{
         switch self {
-        case .Category:
+        case .Category,.InterestedCreative:
             return [BEHANCE_ARGUMENT_CLIENT_ID:BEHANCE_APP_KEY]
         }
     }
     
     var parameterEncoding: ParameterEncoding{
         switch self {
-        case .Category:
+        case .Category,.InterestedCreative:
             return URLEncoding.default
         }
     }
     
     var sampleData: Data{
         switch self {
-        case .Category:
+        case .Category,.InterestedCreative:
             return "".data(using: String.Encoding.utf8)!
         }
     }
     
     var task: Task{
         switch self {
-        case .Category:
+        case .Category,.InterestedCreative:
             return .request
         }
     }

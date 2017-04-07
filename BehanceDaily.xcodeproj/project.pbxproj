@@ -13,6 +13,7 @@
 		D632310A1E97414100346BDC /* CreativeCategoryEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63231091E97414100346BDC /* CreativeCategoryEngine.swift */; };
 		D632310C1E9741AB00346BDC /* GlobalMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632310B1E9741AB00346BDC /* GlobalMacro.swift */; };
 		D63231101E97434700346BDC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632310F1E97434700346BDC /* Category.swift */; };
+		D63231161E974C5100346BDC /* Creative.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63231151E974C5100346BDC /* Creative.swift */; };
 		F75D30660B0A6456977AA257 /* Pods_BehanceDaily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3446F528EA75BB27EDF743E2 /* Pods_BehanceDaily.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		D63231091E97414100346BDC /* CreativeCategoryEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreativeCategoryEngine.swift; sourceTree = "<group>"; };
 		D632310B1E9741AB00346BDC /* GlobalMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalMacro.swift; sourceTree = "<group>"; };
 		D632310F1E97434700346BDC /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		D63231151E974C5100346BDC /* Creative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Creative.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 		D632310D1E97431E00346BDC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D63231141E974C3F00346BDC /* Creative */,
 				D632310E1E97432E00346BDC /* Category */,
 			);
 			path = Model;
@@ -175,6 +178,14 @@
 				D632310F1E97434700346BDC /* Category.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		D63231141E974C3F00346BDC /* Creative */ = {
+			isa = PBXGroup;
+			children = (
+				D63231151E974C5100346BDC /* Creative.swift */,
+			);
+			path = Creative;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +314,7 @@
 				D632310C1E9741AB00346BDC /* GlobalMacro.swift in Sources */,
 				D632310A1E97414100346BDC /* CreativeCategoryEngine.swift in Sources */,
 				D63231011E973CEA00346BDC /* AppDelegate.swift in Sources */,
+				D63231161E974C5100346BDC /* Creative.swift in Sources */,
 				D63231101E97434700346BDC /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

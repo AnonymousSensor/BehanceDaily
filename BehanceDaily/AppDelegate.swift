@@ -28,6 +28,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("default value")
             }
         })
+        
+        provider.request(.InterestedCreative).mapObject(InterestedCreative.self).subscribe({event in
+            switch event{
+            case .next(let result):
+                print("Creatives总数：\(result.creativesToFollow.count) 第一个名称:\(result.creativesToFollow[0].userName)")
+            default:
+                print("default value")
+            }
+        })
         return true
     }
 
