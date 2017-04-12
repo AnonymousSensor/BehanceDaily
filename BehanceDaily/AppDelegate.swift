@@ -24,8 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch event{
             case .next(let categoryResult):
                 print("Fields总数:\(categoryResult.fields!.count) 第一个Fields名称:\(categoryResult.fields![0].name)")
+            case .completed:
+                print("categroy done")
             default:
-                print("default value")
+                print("default 1")
             }
         })
         
@@ -33,8 +35,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch event{
             case .next(let result):
                 print("Creatives总数：\(result.creativesToFollow.count) 第一个名称:\(result.creativesToFollow[0].userName)")
+            case .completed:
+                print("InterestedCreative Done")
             default:
-                print("default value")
+                print("default 2")
+            }
+        })
+        
+        let projectProvider = RxMoyaProvider<Project>()
+        projectProvider.request(.SearchProject(searchText: "design", sort: SearchProjectSortType.FeaturedDate, time: SearchProjectTimeType.All, field: "", country: CountryCodeType.Default, state: "", city: "", page: 0, tags: "", colorHex: "", colorRange: 0, license: "")).mapObject(ProjectInfoResult.self).subscribe({event in
+            switch event{
+            case .next(let result):
+                print("总数\(result.projects.count)")
+            case .completed:
+                print("search project done")
+            default:
+                print("default 3")
             }
         })
         return true

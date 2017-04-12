@@ -14,6 +14,11 @@
 		D632310C1E9741AB00346BDC /* GlobalMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632310B1E9741AB00346BDC /* GlobalMacro.swift */; };
 		D63231101E97434700346BDC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632310F1E97434700346BDC /* Category.swift */; };
 		D63231161E974C5100346BDC /* Creative.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63231151E974C5100346BDC /* Creative.swift */; };
+		D63231191E9764AC00346BDC /* ProjectEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63231181E9764AC00346BDC /* ProjectEngine.swift */; };
+		D632311C1E976D5A00346BDC /* CountryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632311B1E976D5A00346BDC /* CountryCode.swift */; };
+		D632311F1E97816C00346BDC /* ProjectInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632311E1E97816C00346BDC /* ProjectInfo.swift */; };
+		D63231221E9789EA00346BDC /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63231211E9789EA00346BDC /* Owner.swift */; };
+		D63231241E978D4900346BDC /* ProjectStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63231231E978D4900346BDC /* ProjectStats.swift */; };
 		F75D30660B0A6456977AA257 /* Pods_BehanceDaily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3446F528EA75BB27EDF743E2 /* Pods_BehanceDaily.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +34,11 @@
 		D632310B1E9741AB00346BDC /* GlobalMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalMacro.swift; sourceTree = "<group>"; };
 		D632310F1E97434700346BDC /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		D63231151E974C5100346BDC /* Creative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Creative.swift; sourceTree = "<group>"; };
+		D63231181E9764AC00346BDC /* ProjectEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectEngine.swift; sourceTree = "<group>"; };
+		D632311B1E976D5A00346BDC /* CountryCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryCode.swift; sourceTree = "<group>"; };
+		D632311E1E97816C00346BDC /* ProjectInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectInfo.swift; sourceTree = "<group>"; };
+		D63231211E9789EA00346BDC /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		D63231231E978D4900346BDC /* ProjectStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectStats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +144,7 @@
 		D63230F71E973AA800346BDC /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D63231171E97648E00346BDC /* Project */,
 				D63231061E9740F400346BDC /* Category */,
 			);
 			path = Network;
@@ -166,6 +177,9 @@
 		D632310D1E97431E00346BDC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D63231201E9789D700346BDC /* User */,
+				D632311D1E97816100346BDC /* Project */,
+				D632311A1E976D4400346BDC /* Base */,
 				D63231141E974C3F00346BDC /* Creative */,
 				D632310E1E97432E00346BDC /* Category */,
 			);
@@ -186,6 +200,39 @@
 				D63231151E974C5100346BDC /* Creative.swift */,
 			);
 			path = Creative;
+			sourceTree = "<group>";
+		};
+		D63231171E97648E00346BDC /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				D63231181E9764AC00346BDC /* ProjectEngine.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		D632311A1E976D4400346BDC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D632311B1E976D5A00346BDC /* CountryCode.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D632311D1E97816100346BDC /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				D632311E1E97816C00346BDC /* ProjectInfo.swift */,
+				D63231231E978D4900346BDC /* ProjectStats.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		D63231201E9789D700346BDC /* User */ = {
+			isa = PBXGroup;
+			children = (
+				D63231211E9789EA00346BDC /* Owner.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,10 +359,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D632310C1E9741AB00346BDC /* GlobalMacro.swift in Sources */,
+				D632311C1E976D5A00346BDC /* CountryCode.swift in Sources */,
+				D63231191E9764AC00346BDC /* ProjectEngine.swift in Sources */,
 				D632310A1E97414100346BDC /* CreativeCategoryEngine.swift in Sources */,
+				D63231221E9789EA00346BDC /* Owner.swift in Sources */,
+				D63231241E978D4900346BDC /* ProjectStats.swift in Sources */,
 				D63231011E973CEA00346BDC /* AppDelegate.swift in Sources */,
 				D63231161E974C5100346BDC /* Creative.swift in Sources */,
 				D63231101E97434700346BDC /* Category.swift in Sources */,
+				D632311F1E97816C00346BDC /* ProjectInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
