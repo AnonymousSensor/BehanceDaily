@@ -43,6 +43,7 @@ enum SearchProjectTimeType: String{
 
 enum Project{
     case SearchProject(searchText:String,sort:SearchProjectSortType,time:SearchProjectTimeType,field:String,country:CountryCodeType,state:String,city:String,page:Int,tags:String,colorHex:String,colorRange:Int,license:String)
+    case ProjectInfo(projectId:String)
 }
 
 extension Project: TargetType{
@@ -51,12 +52,16 @@ extension Project: TargetType{
         switch self {
         case .SearchProject:
             return BEHANCE_URL_SEARCH_PROJECT
+        case .ProjectInfo(let projectId):
+            return "\(BEHANCE_URL_PROJECT_INFO)/\(projectId)"
         }
     }
     
     var method: Moya.Method{
         switch self {
         case .SearchProject:
+            return .get
+        case .ProjectInfo:
             return .get
         }
     }
@@ -77,26 +82,28 @@ extension Project: TargetType{
                     BEHANCE_ARGUMENT_SEARCH_PROJECT_COLOR_RANGE:colorRange,
                     BEHANCE_ARGUMENT_SEARCH_PROJECT_COLOR_LICESE:license,
                     BEHANCE_ARGUMENT_CLIENT_ID:BEHANCE_APP_KEY]
+        case .ProjectInfo:
+            return [BEHANCE_ARGUMENT_CLIENT_ID:BEHANCE_APP_KEY]
         }
     }
     
     var parameterEncoding: ParameterEncoding{
         switch self {
-        case .SearchProject:
+        case .SearchProject,.ProjectInfo:
             return URLEncoding.default
         }
     }
     
     var sampleData: Data{
         switch self {
-        case .SearchProject:
+        case .SearchProject,.ProjectInfo:
             return "".data(using: String.Encoding.utf8)!
         }
     }
     
     var task: Task{
         switch self {
-        case .SearchProject:
+        case .SearchProject,.ProjectInfo:
             return .request
         }
     }

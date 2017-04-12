@@ -42,15 +42,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         })
         
+        //搜索Project接口
         let projectProvider = RxMoyaProvider<Project>()
-        projectProvider.request(.SearchProject(searchText: "design", sort: SearchProjectSortType.FeaturedDate, time: SearchProjectTimeType.All, field: "", country: CountryCodeType.Default, state: "", city: "", page: 0, tags: "", colorHex: "", colorRange: 0, license: "")).mapObject(ProjectInfoResult.self).subscribe({event in
+//        projectProvider.request(.SearchProject(searchText: "design", sort: SearchProjectSortType.FeaturedDate, time: SearchProjectTimeType.All, field: "", country: CountryCodeType.Default, state: "", city: "", page: 0, tags: "", colorHex: "", colorRange: 0, license: "")).mapObject(ProjectInfoResult.self).subscribe({event in
+//            switch event{
+//            case .next(let result):
+//                print("总数\(result.projects.count)")
+//            case .completed:
+//                print("search project done")
+//            default:
+//                print("default 3")
+//            }
+//        })
+        
+        //查询Project详情接口
+        projectProvider.request(.ProjectInfo(projectId: "4889175")).mapObject(ProjectInfoResult.self).subscribe({event in
             switch event{
             case .next(let result):
-                print("总数\(result.projects.count)")
+                print("结果:\(result.project.name)")
             case .completed:
-                print("search project done")
+                print("query project info done")
             default:
-                print("default 3")
+                print("default 4")
             }
         })
         return true

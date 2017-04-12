@@ -22,6 +22,10 @@ class ProjectInfo:Mappable{
     var matureContent:Int!
     var owners:[String:Owner]!
     var stats:ProjectStats!
+    var description:String!
+    var modules:[Module]!
+    var copyRight:CopyRight!
+    var featuredOn:FeaturedOn!
     
     required init?(map: Map) {
         
@@ -40,11 +44,16 @@ class ProjectInfo:Mappable{
         matureContent <- map["mature_content"]
         owners <- map["owners"]
         stats <- map["stats"]
+        description <- map["description"]
+        modules <- map["modules"]
+        copyRight <- map["copyright"]
+        featuredOn <- map["featured_on"]
     }
 }
 
 class ProjectInfoResult:Mappable{
-    var projects:[ProjectInfo]!
+    var projects:[ProjectInfo]!//搜索Project
+    var project:ProjectInfo!
     
     required init?(map: Map) {
         
@@ -52,5 +61,6 @@ class ProjectInfoResult:Mappable{
     
     func mapping(map: Map) {
        projects <- map["projects"]
+       project <- map["project"]
     }
 }
