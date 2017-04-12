@@ -66,6 +66,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("default 4")
             }
         })
+        
+        //查询Project评论接口
+        projectProvider.request(.ProjectComments(projectId: "4889175")).mapObject(ProjectCommentsResult.self).subscribe({event in
+            switch event{
+            case .next(let result):
+                print("评论总数:\(result.comments.count)")
+            case .completed:
+                print("query project comment done")
+            default:
+                print("default 5")
+            }
+        })
         return true
     }
 

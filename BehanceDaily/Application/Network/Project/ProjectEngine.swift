@@ -44,6 +44,7 @@ enum SearchProjectTimeType: String{
 enum Project{
     case SearchProject(searchText:String,sort:SearchProjectSortType,time:SearchProjectTimeType,field:String,country:CountryCodeType,state:String,city:String,page:Int,tags:String,colorHex:String,colorRange:Int,license:String)
     case ProjectInfo(projectId:String)
+    case ProjectComments(projectId:String)
 }
 
 extension Project: TargetType{
@@ -54,14 +55,14 @@ extension Project: TargetType{
             return BEHANCE_URL_SEARCH_PROJECT
         case .ProjectInfo(let projectId):
             return "\(BEHANCE_URL_PROJECT_INFO)/\(projectId)"
+        case .ProjectComments(let projectId):
+            return "\(BEHANCE_URL_PROJECT_COMMENT)/\(projectId)/\(BEHANCE_URL_PROJECT_COMMENT_PATH)"
         }
     }
     
     var method: Moya.Method{
         switch self {
-        case .SearchProject:
-            return .get
-        case .ProjectInfo:
+        case .SearchProject,.ProjectInfo,.ProjectComments:
             return .get
         }
     }
@@ -82,28 +83,28 @@ extension Project: TargetType{
                     BEHANCE_ARGUMENT_SEARCH_PROJECT_COLOR_RANGE:colorRange,
                     BEHANCE_ARGUMENT_SEARCH_PROJECT_COLOR_LICESE:license,
                     BEHANCE_ARGUMENT_CLIENT_ID:BEHANCE_APP_KEY]
-        case .ProjectInfo:
+        case .ProjectInfo,.ProjectComments:
             return [BEHANCE_ARGUMENT_CLIENT_ID:BEHANCE_APP_KEY]
         }
     }
     
     var parameterEncoding: ParameterEncoding{
         switch self {
-        case .SearchProject,.ProjectInfo:
+        case .SearchProject,.ProjectInfo,.ProjectComments:
             return URLEncoding.default
         }
     }
     
     var sampleData: Data{
         switch self {
-        case .SearchProject,.ProjectInfo:
+        case .SearchProject,.ProjectInfo,.ProjectComments:
             return "".data(using: String.Encoding.utf8)!
         }
     }
     
     var task: Task{
         switch self {
-        case .SearchProject,.ProjectInfo:
+        case .SearchProject,.ProjectInfo,.ProjectComments:
             return .request
         }
     }

@@ -22,6 +22,7 @@
 		D6818AE21E9DF3B100CA1E13 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6818AE11E9DF3B100CA1E13 /* Module.swift */; };
 		D6818AE41E9DF4FF00CA1E13 /* CopyRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6818AE31E9DF4FF00CA1E13 /* CopyRight.swift */; };
 		D6818AE61E9DF60700CA1E13 /* FeaturedOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6818AE51E9DF60700CA1E13 /* FeaturedOn.swift */; };
+		D6818AE81E9DFA3300CA1E13 /* ProjectComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6818AE71E9DFA3300CA1E13 /* ProjectComment.swift */; };
 		F75D30660B0A6456977AA257 /* Pods_BehanceDaily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3446F528EA75BB27EDF743E2 /* Pods_BehanceDaily.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		D6818AE11E9DF3B100CA1E13 /* Module.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		D6818AE31E9DF4FF00CA1E13 /* CopyRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyRight.swift; sourceTree = "<group>"; };
 		D6818AE51E9DF60700CA1E13 /* FeaturedOn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedOn.swift; sourceTree = "<group>"; };
+		D6818AE71E9DFA3300CA1E13 /* ProjectComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectComment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 			children = (
 				D632311E1E97816C00346BDC /* ProjectInfo.swift */,
 				D63231231E978D4900346BDC /* ProjectStats.swift */,
+				D6818AE71E9DFA3300CA1E13 /* ProjectComment.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				D63231191E9764AC00346BDC /* ProjectEngine.swift in Sources */,
 				D6818AE41E9DF4FF00CA1E13 /* CopyRight.swift in Sources */,
 				D632310A1E97414100346BDC /* CreativeCategoryEngine.swift in Sources */,
+				D6818AE81E9DFA3300CA1E13 /* ProjectComment.swift in Sources */,
 				D63231221E9789EA00346BDC /* Owner.swift in Sources */,
 				D63231241E978D4900346BDC /* ProjectStats.swift in Sources */,
 				D63231011E973CEA00346BDC /* AppDelegate.swift in Sources */,
