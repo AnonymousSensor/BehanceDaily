@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D61119121EA34EBA00FD1536 /* UserEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61119111EA34EBA00FD1536 /* UserEngine.swift */; };
 		D61119161EA3505D00FD1536 /* CollectionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61119151EA3505D00FD1536 /* CollectionEngine.swift */; };
+		D61119181EA356D500FD1536 /* CollectionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61119171EA356D500FD1536 /* CollectionInfo.swift */; };
 		D63231011E973CEA00346BDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63231001E973CEA00346BDC /* AppDelegate.swift */; };
 		D63231041E973CFE00346BDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D63231021E973CFE00346BDC /* Assets.xcassets */; };
 		D63231051E973CFE00346BDC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D63231031E973CFE00346BDC /* Info.plist */; };
@@ -34,6 +35,7 @@
 		AC605CFF17F5228E7E659B25 /* Pods-BehanceDaily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BehanceDaily.release.xcconfig"; path = "Pods/Target Support Files/Pods-BehanceDaily/Pods-BehanceDaily.release.xcconfig"; sourceTree = "<group>"; };
 		D61119111EA34EBA00FD1536 /* UserEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEngine.swift; sourceTree = "<group>"; };
 		D61119151EA3505D00FD1536 /* CollectionEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionEngine.swift; sourceTree = "<group>"; };
+		D61119171EA356D500FD1536 /* CollectionInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionInfo.swift; sourceTree = "<group>"; };
 		D63230DD1E97330500346BDC /* BehanceDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BehanceDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D63231001E973CEA00346BDC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = BehanceDaily/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		D63231021E973CFE00346BDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = BehanceDaily/Assets.xcassets; sourceTree = SOURCE_ROOT; };
@@ -101,6 +103,7 @@
 		D61119141EA3503500FD1536 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
+				D61119171EA356D500FD1536 /* CollectionInfo.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 			files = (
 				D632310C1E9741AB00346BDC /* GlobalMacro.swift in Sources */,
 				D632311C1E976D5A00346BDC /* CountryCode.swift in Sources */,
+				D61119181EA356D500FD1536 /* CollectionInfo.swift in Sources */,
 				D63231191E9764AC00346BDC /* ProjectEngine.swift in Sources */,
 				D61119161EA3505D00FD1536 /* CollectionEngine.swift in Sources */,
 				D6818AE41E9DF4FF00CA1E13 /* CopyRight.swift in Sources */,
