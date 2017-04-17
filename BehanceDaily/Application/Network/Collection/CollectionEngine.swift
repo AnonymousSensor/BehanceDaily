@@ -48,7 +48,8 @@ extension Collection:TargetType{
             return [BEHANCE_ARGUMENT_SEARCH_COLLECTION_Q:searchText,
                     BEHANCE_ARGUMENT_SEARCH_COLLECTION_TIME:time.rawValue,
                     BEHANCE_ARGUMENT_SEARCH_COLLECTION_PAGE:page,
-                    BEHANCE_ARGUMENT_SEARCH_COLLECTION_SORT:sort.rawValue]
+                    BEHANCE_ARGUMENT_SEARCH_COLLECTION_SORT:sort.rawValue,
+                    BEHANCE_ARGUMENT_APP_KEY:BEHANCE_APP_KEY]
         }
     }
     

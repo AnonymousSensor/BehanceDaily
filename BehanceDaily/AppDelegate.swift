@@ -78,6 +78,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("default 5")
             }
         })
+        
+        //Collection接口
+        let collectionProvider = RxMoyaProvider<Collection>()
+        collectionProvider.request(.SearchCollections(searchText: "design", time: SearchCollectionTimeType.All, page: 1, sort: SearchCollectionSortType.Comments)).mapObject(CollectionInfoResult.self).subscribe({event in
+            switch event{
+            case .next(let result):
+                print("集合总数:\(result.collections.count)")
+            case .completed:
+                print("query collections done")
+            default:
+                print("default 6")
+            }
+        })
         return true
     }
 

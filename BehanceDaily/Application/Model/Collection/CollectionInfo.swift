@@ -48,3 +48,16 @@ class CollectionStats:Mappable{
         followers <- map["followers"]
     }
 }
+
+class CollectionInfoResult:Mappable {
+    var collections:[CollectionInfo]!
+    
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        collections <- map["collections"]
+    }
+
+}
